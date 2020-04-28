@@ -13,6 +13,8 @@ import {PortalModule} from '@angular/cdk/portal';
 import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 import {CdkStepperModule} from '@angular/cdk/stepper';
 import {CdkTableModule} from '@angular/cdk/table';
+import {MatStepperModule} from '@angular/material/stepper';
+
 import {
   MatAutocompleteModule,
   MatButtonModule,
