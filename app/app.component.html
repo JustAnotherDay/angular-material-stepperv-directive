@@ -1,8 +1,36 @@
 <mat-toolbar color="primary">
   Angular Material 2 App
 </mat-toolbar>
+<style>
+  .mat-step-custom-click {
+    top: 0;
+    left: 0;
+    width: 130px; // as per your need
+    height: 72px; // as per your need
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
 <div class="basic-container">
-  <mat-vertical-stepper appMatStepperScrollTop>
+  <mat-vertical-stepper appMatStepperScrollTop #stepper>
+  <mat-step>
+     <ng-template matStepLabel>
+      ...
+    </ng-template>
+    <h1>step0</h1>
+    <h1>step0</h1>
+    <h1>step0</h1>
+    <h1>step0</h1>
+    <h1>step0</h1>
+    <h1>step0</h1>
+    <h1>step0</h1>
+    <h1>step0</h1>
+    <h1>step0</h1>
+    <h1>step0</h1>
+    <h1>step0</h1>
+  </mat-step>
   <mat-step>
     <ng-template matStepLabel>...</ng-template>
     <h1>step1</h1>
