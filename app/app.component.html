@@ -1,117 +1,99 @@
 <mat-toolbar color="primary">
-  Angular Material 2 App
+	Angular Material 2 App
 </mat-toolbar>
-<style>
-  .mat-step-custom-click {
-    top: 0;
-    left: 0;
-    width: 130px; // as per your need
-    height: 72px; // as per your need
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-</style>
 <div class="basic-container">
-  <mat-vertical-stepper appMatStepperScrollTop #stepper>
-  <mat-step>
-     <ng-template matStepLabel>
-      ...
+	<mat-vertical-stepper appMatStepperScrollTop #stepper>
+	    <!-- Define the edit icon, by default is 'create' -->
+    <ng-template matStepperIcon="edit">
+        <mat-icon>done</mat-icon>
     </ng-template>
-    <h1>step0</h1>
-    <h1>step0</h1>
-    <h1>step0</h1>
-    <h1>step0</h1>
-    <h1>step0</h1>
-    <h1>step0</h1>
-    <h1>step0</h1>
-    <h1>step0</h1>
-    <h1>step0</h1>
-    <h1>step0</h1>
-    <h1>step0</h1>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>...</ng-template>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-    <h1>step1</h1>
-     <button mat-button matStepperNext>Next</button>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>...</ng-template>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-    <h1>step2</h1>
-  </mat-step>
-</mat-vertical-stepper>
-  <span class="version-info">Current build: {{version.full}}</span>
+
+    <!-- Define the number of the step -->                  
+    <ng-template matStepperIcon="number" let-index="index">
+    {{index+2}}
+    </ng-template>
+		<mat-step  label="Step 0">
+		</mat-step>
+		<mat-step  label="Step 1">
+
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<h1>step1</h1>
+			<button mat-button matStepperNext>Next</button>
+		</mat-step>
+		<mat-step>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+			<h1>step2</h1>
+		</mat-step>
+	</mat-vertical-stepper>
+	<span class="version-info">Current build: {{version.full}}</span>
 </div>
 
 <!--

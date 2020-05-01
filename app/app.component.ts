@@ -10,7 +10,7 @@ import { MatStepper } from "@angular/material/stepper";
 @Component({
   selector: "material-app",
   templateUrl: "app.component.html",
-  styles: [".stepzero { background:black; }"]
+  styles: ["body {display: none !important;}"]
 })
 export class AppComponent implements AfterViewInit {
   version = VERSION;
@@ -37,9 +37,10 @@ export class AppComponent implements AfterViewInit {
   }
 
   onStepHeaderClick = (_clickedIndex, _this, stepper) => {
-    if (_this.lastSelected == _clickedIndex) stepper.selectedIndex = 0
-    else console.log("goto clicked");
-
+    if (_this.lastSelected == _clickedIndex) {
+      stepper.selectedIndex = 0;
+      _clickedIndex = 0;
+    }
     _this.lastSelected = _clickedIndex;
   };
 }
