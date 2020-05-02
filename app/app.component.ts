@@ -16,9 +16,7 @@ export class AppComponent implements AfterViewInit {
   version = VERSION;
 
   @ViewChild("stepper") stepper: MatStepper;
-  @ViewChild("lastStep") lastStep: ElementRef;
   lastSelected = 0;
-  showStep = true;
 
   ngAfterViewInit() {
     const selectedIndex = this.stepper.selectedIndex.toString();
