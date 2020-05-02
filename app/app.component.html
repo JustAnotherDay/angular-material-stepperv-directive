@@ -3,19 +3,7 @@
 </mat-toolbar>
 <div class="basic-container">
 	<mat-vertical-stepper appMatStepperScrollTop #stepper>
-	    <!-- Define the edit icon, by default is 'create' -->
-    <ng-template matStepperIcon="edit">
-        <mat-icon>done</mat-icon>
-    </ng-template>
-
-    <!-- Define the number of the step -->                  
-    <ng-template matStepperIcon="number" let-index="index">
-    {{index+2}}
-    </ng-template>
-		<mat-step  label="Step 0">
-		</mat-step>
-		<mat-step  label="Step 1">
-
+		<mat-step label="Step 1">
 			<h1>step1</h1>
 			<h1>step1</h1>
 			<h1>step1</h1>
@@ -52,7 +40,7 @@
 			<h1>step1</h1>
 			<button mat-button matStepperNext>Next</button>
 		</mat-step>
-		<mat-step>
+		<mat-step label="Step 2">
 			<h1>step2</h1>
 			<h1>step2</h1>
 			<h1>step2</h1>
@@ -91,6 +79,9 @@
 			<h1>step2</h1>
 			<h1>step2</h1>
 			<h1>step2</h1>
+		</mat-step>
+		<mat-step #lastStep>
+      asdasd
 		</mat-step>
 	</mat-vertical-stepper>
 	<span class="version-info">Current build: {{version.full}}</span>

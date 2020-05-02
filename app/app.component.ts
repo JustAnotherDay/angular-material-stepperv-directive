@@ -10,25 +10,24 @@ import { MatStepper } from "@angular/material/stepper";
 @Component({
   selector: "material-app",
   templateUrl: "app.component.html",
-  styles: ["body {display: none !important;}"]
+  styleUrls: ["app.component.css"]
 })
 export class AppComponent implements AfterViewInit {
   version = VERSION;
 
   @ViewChild("stepper") stepper: MatStepper;
-
+  @ViewChild("lastStep") lastStep: ElementRef;
   lastSelected = 0;
 
   ngAfterViewInit() {
     const selectedIndex = this.stepper.selectedIndex.toString();
-    //debugger;
     var _this = this;
     this.stepper._stepHeader._results.forEach(stepHeader => {
       stepHeader.nativeElement.addEventListener(
         "click",
         this.onStepHeaderClick.bind(
           null,
-          stepHeader.nativeElement.attributes[4].value,
+          stepHeader.nativeElement.attributes["ng-reflect-index"].value,
           _this,
           this.stepper
         )
@@ -37,9 +36,10 @@ export class AppComponent implements AfterViewInit {
   }
 
   onStepHeaderClick = (_clickedIndex, _this, stepper) => {
+    //debugger;
     if (_this.lastSelected == _clickedIndex) {
-      stepper.selectedIndex = 0;
-      _clickedIndex = 0;
+      stepper.selectedIndex = stepper._steps.length - 1;
+      _clickedIndex = stepper._steps.length - 1;
     }
     _this.lastSelected = _clickedIndex;
   };
