@@ -19,7 +19,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild("lastStep") lastStep: ElementRef;
   lastSelected = 0;
   showStep = true;
-  
+
   ngAfterViewInit() {
     const selectedIndex = this.stepper.selectedIndex.toString();
     var _this = this;
@@ -37,7 +37,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   onStepHeaderClick = (_clickedIndex, _this, stepper) => {
-    //debugger;
     if (_this.lastSelected == _clickedIndex) {
       stepper.selectedIndex = stepper._steps.length - 1;
       _clickedIndex = stepper._steps.length - 1;
